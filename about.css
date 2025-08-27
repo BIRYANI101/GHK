@@ -1,0 +1,242 @@
+/* HERO SECTION */
+
+    /* Banner Section */
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: url('./shop.png') center/cover no-repeat; 
+      /* Replace this with your image */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .banner-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .banner-content p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .banner {
+        height: 40vh;
+      }
+
+      .banner-content h1 {
+        font-size: 2rem;
+      }
+
+      .banner-content p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner {
+        height: 35vh;
+      }
+
+      .banner-content h1 {
+        font-size: 1.5rem;
+      }
+
+      .banner-content p {
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+
+
+       
+
+     
+
+        /* Footer Section */
+        .footer-section {
+            width: 100%;
+            background-color: #e3e6f3;
+            padding: 50px 0;
+        }
+
+        .newsletter-container {
+            background-color: #041e42;
+            color: #fff;
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .newsletter-container h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .newsletter-container p {
+            font-size: 14px;
+            color: #818ea0;
+        }
+
+        .newsletter-container span {
+            color: #ffbd27;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 5px;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 12px 20px;
+            background-color: #088178;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px 10%;
+            gap: 40px;
+        }
+
+        .footer-col {
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-col .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .footer-col p, .footer-col a {
+            font-size: 14px;
+            color: #465b52;;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: #088178;
+        }
+
+        .social-icons a {
+            color: #465b52;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .install-app .app-buttons img {
+            height: 40px;
+            margin-right: 5px;
+        }
+
+        .install-app .payment-gateways img {
+            max-width: 250px;
+            margin-top: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #465b52;
+            font-size: 14px;
+            padding: 20px;
+            border-top: 1px solid #dcdcdc;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .newsletter-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px 5%;
+            }
+
+            .newsletter-text h3 {
+                font-size: 20px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .newsletter-form button {
+                width: 100%;
+            }
+
+            .footer-main {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px 5%;
+                gap: 30px;
+            }
+
+            .footer-col {
+                min-width: 100%;
+            }
+
+            .install-app .app-buttons img {
+                height: 35px;
+            }
+
+            .install-app .payment-gateways img {
+                max-width: 200px;
+            }
+        }
+
+        

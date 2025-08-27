@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Shop</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="./blog.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+<body>
+  
+
+
+
+
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Spartan', sans-serif;
+    }
+
+    body {
+      width: 100%;
+    }
+
+    /* HEADER */
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: #E3E6F3;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #navbar li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    #navbar li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+      color: #088178;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: #088178;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+
+    /* HAMBURGER ICON */
+    #mobile {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* -------- Responsive -------- */
+    @media (max-width: 768px) {
+      #navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: -200px;
+        width: 200px;
+        background: #E3E6F3;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+      }
+
+      #navbar.active {
+        right: 0;
+      }
+
+      #navbar li {
+        padding: 15px 0;
+      }
+
+      #mobile {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- NAVBAR -->
+  <section id="header">
+    <a href="#"><img src="./image.png" class="logo" alt="Logo"></a>
+    
+    <ul id="navbar">
+      <li><a  href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a class="active" href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li> 
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+    </ul>
+
+    <div id="mobile">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </section>
+
+  <script>
+    const mobile = document.getElementById("mobile");
+    const navbar = document.getElementById("navbar");
+
+    mobile.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read More Banner</title>
+  <style>
+  
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: url('./book.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4); /* dark overlay */
+    }
+
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 15px;
+    }
+
+    .banner-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .banner-content p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .banner {
+        height: 50vh;
+      }
+
+      .banner-content h1 {
+        font-size: 2rem;
+      }
+
+      .banner-content p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner {
+        height: 40vh;
+      }
+
+      .banner-content h1 {
+        font-size: 1.5rem;
+      }
+
+      .banner-content p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>#readmore</h1>
+      <p>Read all case studies about our products!</p>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Blog Card</title>
+  <style>
+
+
+    .card {
+      display: flex;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card-image {
+      position: relative;
+      width: 50%;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-date {
+      position: absolute;
+      top: -8px;
+      left: 15px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: rgba(114, 1, 12, 0.9);
+    }
+
+    .card-content {
+      width: 50%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-content h2 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .card-content a {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      border-bottom: 2px solid #000;
+      width: fit-content;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .card-image, .card-content {
+        width: 100%;
+      }
+
+      .card-date {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <center>
+  <div class="card">
+    <div class="card-image">
+      <!-- <span class="card-date">13/01</span> -->
+      <img src="./blog11.png" alt="Fashion">
+    </div>
+    <div class="card-content">
+      <h2>The Cotton-Jersey Zip-Up Hoodie</h2>
+      <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+      <a href="#">CONTINUE READING</a>
+    </div>
+  </div>
+    </center>
+
+    <br><br>
+
+
+    <center>
+  <div class="card">
+    <div class="card-image">
+      <!-- <span class="card-date">13/01</span> -->
+      <img src="./blog11.png" alt="Fashion">
+    </div>
+    <div class="card-content">
+      <h2>The Cotton-Jersey Zip-Up Hoodie</h2>
+      <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+      <a href="#">CONTINUE READING</a>
+    </div>
+  </div>
+    </center>
+
+    <br><br>
+
+
+    <center>
+  <div class="card">
+    <div class="card-image">
+      <!-- <span class="card-date">13/01</span> -->
+      <img src="./blog11.png" alt="Fashion">
+    </div>
+    <div class="card-content">
+      <h2>The Cotton-Jersey Zip-Up Hoodie</h2>
+      <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+      <a href="#">CONTINUE READING</a>
+    </div>
+  </div>
+    </center>
+
+    <br><br>
+
+
+    <center>
+  <div class="card">
+    <div class="card-image">
+      <!-- <span class="card-date">13/01</span> -->
+      <img src="./blog11.png" alt="Fashion">
+    </div>
+    <div class="card-content">
+      <h2>The Cotton-Jersey Zip-Up Hoodie</h2>
+      <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+      <a href="#">CONTINUE READING</a>
+    </div>
+  </div>
+    </center>
+
+    <br><br>
+
+    <center>
+  <div class="card">
+    <div class="card-image">
+      <!-- <span class="card-date">13/01</span> -->
+      <img src="./blog11.png" alt="Fashion">
+    </div>
+    <div class="card-content">
+      <h2>The Cotton-Jersey Zip-Up Hoodie</h2>
+      <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+      <a href="#">CONTINUE READING</a>
+    </div>
+  </div>
+    </center>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+
+
+    <footer class="footer-section">
+        <div class="newsletter-container">
+            <div class="newsletter-text">
+                <h3>Sign Up For Newsletters</h3>
+                <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button type="button">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-col contact-info">
+                <img src="./image.png" alt="Cara Logo" class="logo">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Francisco</p>
+                <p><strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+                <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fab fa-pinterest-p"></i></a> -->
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="footer-col install-app">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="app-buttons">
+                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzRNHdGo9kEMQfYp97VJI-cGl0FOb6NiCY3w&s" alt="App Store" style="width: 170px;"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Google_Play_2022_logo.svg/2560px-Google_Play_2022_logo.svg.png" alt="Google Play" style="width: 170px;"></a>
+                </div>
+                <p>Secured Payment Gateways</p>
+                <div class="payment-gateways">
+                    <img src="./payment.png" alt="Payment Gateways">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025. GHK PRODUCTS </p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+  <script src="./blog.js"></script>
+</body>
+</html>

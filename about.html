@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Footer</title>
+  <link rel="stylesheet" href="./about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Spartan', sans-serif;
+    }
+
+    body {
+      width: 100%;
+    }
+
+    /* HEADER */
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: #E3E6F3;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    #navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #navbar li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    #navbar li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
+
+    #navbar li a:hover,
+    #navbar li a.active {
+      color: #088178;
+    }
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: #088178;
+      position: absolute;
+      bottom: -4px;
+      left: 20px;
+    }
+
+    /* HAMBURGER ICON */
+    #mobile {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* -------- Responsive -------- */
+    @media (max-width: 768px) {
+      #navbar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: -200px;
+        width: 200px;
+        background: #E3E6F3;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+      }
+
+      #navbar.active {
+        right: 0;
+      }
+
+      #navbar li {
+        padding: 15px 0;
+      }
+
+      #mobile {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- NAVBAR -->
+  <section id="header">
+    <a href="#"><img src="./image.png" class="logo" alt="Logo"></a>
+    
+    <ul id="navbar">
+      <li><a  href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a class="active" href="about.html">About</a></li> 
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+    </ul>
+
+    <div id="mobile">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </section>
+
+  <script>
+    const mobile = document.getElementById("mobile");
+    const navbar = document.getElementById("navbar");
+
+    mobile.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
+
+<!-- navbar end -->
+
+
+
+
+<!-- hero section start-->
+
+  <section class="banner">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <h1>#stayhome</h1>
+      <p>Save more with coupons & up to 70% off!</p>
+    </div>
+  </section>
+
+
+  <!-- hero section end -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who We Are</title>
+  <style>
+  
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1100px;
+      width: 100%;
+      gap: 20px;
+      padding: 50px;
+    }
+
+    .left img {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .right {
+      flex: 1;
+    }
+
+    .right h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .right p {
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .right a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .right a:hover {
+      text-decoration: underline;
+    }
+
+    .marquee {
+      background: #f2f2f2;
+      padding: 8px;
+      margin-top: 15px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    marquee {
+      color: #222;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .left img {
+        max-width: 320px;
+      }
+      .right h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side Image -->
+    <div class="left">
+      <img src="./about.png" alt="Shopping Illustration">
+    </div>
+
+    <!-- Right Side Content -->
+    <div class="right">
+      <h2>Who We Are?</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+      <p>
+        <a href="#">Create stunning images with as much or as little control as you like thanks to a choice of Basic and Creative modes.</a>
+      </p>
+      <div class="marquee">
+        <marquee behavior="scroll" direction="left">Create stunning images with as much or as little control as you like</marquee>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features Section</title>
+  <style>
+   
+
+    .features {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap; /* mobile view mein line break allow */
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      flex: 1 1 150px; /* flexible width for responsiveness */
+      max-width: 180px; /* box ki max size */
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-box img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 12px;
+    }
+
+    .feature-box p {
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    /* Colors */
+    .free { background: #ffe5e5; color: #e60000; }
+    .order { background: #e6ffe6; color: #009933; }
+    .money { background: #e6fff5; color: #00b36b; }
+    .promo { background: #e6e6ff; color: #3333cc; }
+    .happy { background: #f9e6ff; color: #9900cc; }
+    .support { background: #fff0e6; color: #cc5200; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .features {
+        gap: 15px;
+      }
+      .feature-box {
+        flex: 1 1 45%; /* 2 boxes per row */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .feature-box {
+        flex: 1 1 100%; /* 1 box per row */
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FEATURES -->
+  <div class="features">
+    <div class="feature-box">
+      <img src="https://img.icons8.com/ios/100/delivery.png" alt="Free Shipping">
+      <p class="free">Free Shipping</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://img.icons8.com/ios/100/clock--v1.png" alt="Online Order">
+      <p class="order">Online Order</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://cdn-icons-png.flaticon.com/512/1611/1611179.png" alt="Save Money">
+      <p class="money">Save Money</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://img.icons8.com/ios/100/sale.png" alt="Promotions">
+      <p class="promo">Promotions</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://img.icons8.com/ios/100/handshake.png" alt="Happy Sell">
+      <p class="happy">Happy Sell</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://img.icons8.com/ios/100/online-support.png" alt="24/7 Support">
+      <p class="support">24/7 Support</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer start -->
+
+
+    <footer class="footer-section">
+        <div class="newsletter-container">
+            <div class="newsletter-text">
+                <h3>Sign Up For Newsletters</h3>
+                <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button type="button">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-col contact-info">
+                <img src="image.png" alt="Cara Logo" class="logo">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Francisco</p>
+                <p><strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+                <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fab fa-pinterest-p"></i></a> -->
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+
+            <div class="footer-col install-app">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="app-buttons">
+                    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzRNHdGo9kEMQfYp97VJI-cGl0FOb6NiCY3w&s" alt="App Store" style="width: 170px;"></a>
+                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Google_Play_2022_logo.svg/2560px-Google_Play_2022_logo.svg.png" alt="Google Play" style="width: 170px;"></a>
+                </div>
+                <p>Secured Payment Gateways</p>
+                <div class="payment-gateways">
+                    <img src="./payment.png" alt="Payment Gateways">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025. GHK PRODUCTS </p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+</html>
